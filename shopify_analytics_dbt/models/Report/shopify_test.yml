@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: Total_daily_revenue
+    description: This table contains the daily revenue of the store; information on refunds made daily are also recorded. Total revenues before and after deductions of daily refunds are computed.
+    columns:
+      - name: order_date
+        description: The uniques days on which items were sold
+        tests:
+          - unique
+          - not_null
+      - name: revenue_before_refund
+        description: The total revenue before deduction of refunds per day.
+        tests:
+          - not_null
+      - name: number_of_orders
+        description: The total number of orders made on days items were sold.
+        tests:
+          - not_null
+      - name: number_of_item_sold
+        description: The total number of items sold on days that sales were made.
+        tests:
+          - not_null
+      - name: daily_refund_amount
+        description: The total amount of daily refunds that was made to customers.
+        tests:
+          - not_null
+      - name: discount
+        description: The daily total discount awarded.
+        tests:
+          - not_null
+      - name: revenue_after_refund
+        description: The total revenue before deduction of refunds
+        tests:
+          - not_null
+
+
+models:
+  - name: Total_revenue_by_geography
+    description: The total revenue obtained by location/ country.
+    columns:
+      - name: customer__default_address__country_name
+        description: Country name
+        tests:
+          - unique
+          - not_null
+      - name: revenue_before_refund
+        description: The total revenue before deduction of refunds.
+        tests:
+          - not_null
+      - name: number_of_orders
+        description: Total number of orders made, by location.
+        tests:
+          - not_null
+      - name: daily_refund_amount
+        description: Refund made to customers, by location.
+        tests:
+          - not_null
+      - name: revenue_after_refund
+        description: The total revenue before deduction of refunds
+        tests:
+          - not_null

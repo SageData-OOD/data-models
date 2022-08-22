@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: shopify_raw_data
+    description: 'Raw shopify data'
+    database: dev
+    schema: public
+    tables:
+      - name: sd__redshift__xl_replicate__sd__shopify__xl__orders
+        description: 'Contains details of orders completed'
+      - name: sd__redshift__xl_replicate__sd__shopify__xl__orders__refunds__order_adjustments
+        description: 'Contains details of refunds made to customers'
