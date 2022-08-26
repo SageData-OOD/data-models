@@ -1,3 +1,9 @@
+{{
+    config(
+        tags=["orders_reports"]
+    )
+}}
+
 select 
     customer__default_address__country_name,
     round(sum(subtotal_price::real),2) revenue_before_refund,

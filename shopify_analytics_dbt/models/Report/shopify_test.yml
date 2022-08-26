@@ -60,3 +60,56 @@ models:
         description: The total revenue before deduction of refunds
         tests:
           - not_null
+
+
+models:
+  - name: Total_revenue_by_marketing
+    description: This table shows total revenues (before refunds) and spends by customers categorised based on whether they accept marketing or not.
+    columns:
+      - name: customer__accepts_marketing
+        description: categorisiation of customers
+        tests:
+          - unique
+      - name: Total_Revenue
+        description: The total revenue before deduction of refunds, by category.
+        tests:
+          - not_null
+      - name: Total_Spend
+        description: Total number of orders made, by category.
+        tests:
+          - not_null
+      - name: Average_Spend
+        description: Refund made to customers, by category.
+        tests:
+          - not_null
+
+
+models:
+  - name: number_items_abandoned_checkout
+    description: This table shows products and the frequency at which they are abandoned at checkout.
+    columns:
+      - name: Products
+        description: Column of products
+        tests:
+          - unique
+      - name: count_of_product
+        description: The total number of each product in the abandoned checkouts.
+        tests:
+          - not_null
+
+models:
+  - name: revenue_by_product
+    description: This table shows products and the revenue per product.
+    columns:
+      - name: Products
+        description: Column of products
+        tests:
+          - unique
+      - name: number_sold
+        description: The total number of each product sold.
+        tests:
+          - not_null
+      - name: Total_revenue
+        description: The total revenue mad from each product.
+        tests:
+          - not_null

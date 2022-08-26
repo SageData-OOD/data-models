@@ -1,3 +1,9 @@
+{{
+    config(
+        tags=["orders_reports"]
+    )
+}}
+
 select 
     date(created_at::timestamp) order_date,
     round(sum(subtotal_price::real),2) revenue_before_refund,

@@ -10,3 +10,10 @@ sources:
         description: 'Contains details of orders completed'
       - name: sd__redshift__xl_replicate__sd__shopify__xl__orders__refunds__order_adjustments
         description: 'Contains details of refunds made to customers'
+      - name: sd__redshift__xl_replicate__sd__shopify__xl__abandoned_checkouts__line_items
+        description: 'Contains details of line items in abandoned checkouts'
+      - name: sd__redshift__xl_replicate__sd__shopify__xl__orders__line_items
+        description: 'Contains the products/ line items in susccessful orders'
+        
+        
+        
