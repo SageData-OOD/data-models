@@ -1,6 +1,6 @@
 {{
     config(
-        tags=["orders_reports"]
+        tags=["revenue"]
     )
 }}
 

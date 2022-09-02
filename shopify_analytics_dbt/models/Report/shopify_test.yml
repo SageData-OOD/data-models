@@ -113,3 +113,58 @@ models:
         description: The total revenue mad from each product.
         tests:
           - not_null
+
+models:
+  - name: rfm_overview
+    description: This table contains showing information on recency, frequency and monetary spending of customers.
+    columns:
+      - name: customer__id
+        description: The unique ids of customers.
+        tests:
+          - unique
+          - not_null
+      - name: recent_order
+        description: The most recent date of purchase by each customers (recency).
+        tests:
+          - not_null
+      - name: total_orders
+        description: The total number of orders made by each customer (frequency).
+        tests:
+          - not_null
+      - name: gross_sales
+        description: The gross amount spent by each customer (monetary).
+        tests:
+          - not_null
+      - name: total_sales
+        description: This is the net sales/ amount from customers, after deduction of refunds, discounts and tax returns.
+
+
+models:
+  - name: rfm_segmentation 
+    description: This table uses quintiles to indicate which customers are in the top 20% for all three metrics (RFM). Also, this table gives atributes and actions for customers based on the rfm_quantiles numbers.
+    columns:
+      - name: customer__id
+        description: The unique ids of customers.
+        tests:
+          - unique
+          - not_null
+      - name: rfm_recency
+        description: The recency of customers' orders on a scale of 5.
+        tests:
+          - not_null
+      - name: rfm_frequency
+        description: The total number of orders made by each customer on a scale of 5.
+        tests:
+          - not_null
+      - name: rfm_monetary
+        description: The total amount spent by each customer on a scale of 5.
+        tests:
+          - not_null
+      - name: rfm_cell
+        description: The 3-digit column that brings together quintiles of all three metrics.
+        tests: 
+          - not_null
+      - name: rfm_segment
+        description: This column classifies customers based on their rfm_cell values (the rfm metrics).
+        tests:
+          - not_null
