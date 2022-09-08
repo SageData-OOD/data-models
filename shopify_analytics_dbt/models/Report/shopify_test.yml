@@ -9,15 +9,15 @@ models:
         tests:
           - unique
           - not_null
-      - name: revenue_before_refund
-        description: The total revenue before deduction of refunds per day.
+      - name: daily_gross_sales
+        description: The original cost of the items in an order, before application of discount.
         tests:
           - not_null
-      - name: number_of_orders
+      - name: daily_number_of_orders
         description: The total number of orders made on days items were sold.
         tests:
           - not_null
-      - name: number_of_item_sold
+      - name: daily_number_of_item_sold
         description: The total number of items sold on days that sales were made.
         tests:
           - not_null
@@ -25,14 +25,35 @@ models:
         description: The total amount of daily refunds that was made to customers.
         tests:
           - not_null
-      - name: discount
+      - name: daily_net_sales
+        description: The daily gross sales minus the daily refund amount.
+        tests:
+          - not_null
+      - name: daily_discount
         description: The daily total discount awarded.
         tests:
           - not_null
-      - name: revenue_after_refund
-        description: The total revenue before deduction of refunds
+      - name: daily_total_taxes
+        description: The daily total taxes paid by customers on items purchased.
         tests:
           - not_null
+      - name: daily_total_tax_returns
+        description: The daily total tax returns paid to customers on items returned.
+        tests:
+          - not_null
+      - name: revenue_after_refund
+        description: The total revenue before deduction of refunds.
+        tests:
+          - not_null
+      - name: shipping_charge
+        description: The price paid by customers for shipping of orders.
+        tests:
+          - not_null
+      - name: total_sales 
+        description: The total amount spent by cusomers less refunds and discounts.
+        tests:
+          - not_null
+     
 
 
 models:
