@@ -1,6 +1,11 @@
 
 
-  create view "dev"."public"."videos_info__dbt_tmp" as (
+  create  table
+    "dev"."public"."videos_info__dbt_tmp"
+    
+    
+    
+  as (
     with videos as
 (
     select *
@@ -14,4 +19,4 @@ select
     statistics__view_count no_of_views
 from
 videos
-  ) ;
+  );

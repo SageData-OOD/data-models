@@ -101,3 +101,23 @@ models:
         description: The percentage change in monthly estmated watch time from the previous month.
         tests:
           - not_null
+
+  - name: daily_ranking_videos
+    description: This table ranks the videos daily based on the number of views.
+    columns:
+      - name: date
+        description: The date for which date was collected.
+        tests:
+          - not_null
+      - name: video_id
+        description: The ids of videos.
+        tests:
+          - not_null
+      - name: video_title
+        description: Corresponding tites of videos.
+        tests:
+          - not_null 
+      - name: views
+        description: number of view for videos.
+        tests:
+          - not_null  

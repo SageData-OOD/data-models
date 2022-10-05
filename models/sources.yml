@@ -10,4 +10,6 @@ sources:
         description: 'This table contains general information about youtube channel'
       - name: sd__youtube__youtube_test__videos
         description: 'This table gives information about videos within a youtube channel'
+      - name: sd__youtube__youtube_test__channel_basic
+        description: 'This table have day-wise information on videos in a channel'
         

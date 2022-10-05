@@ -12,4 +12,6 @@ select
     likes - coalesce(lag(likes, 0) over (order by day), 0) as likes,
     coalesce(estimated_minutes_watched/nullif(views,0), 0) average_view_duration
 from channel
+order by
+day
 

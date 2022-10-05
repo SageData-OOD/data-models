@@ -1,6 +1,11 @@
 
 
-  create view "dev"."public"."channel_info__dbt_tmp" as (
+  create  table
+    "dev"."public"."channel_info__dbt_tmp"
+    
+    
+    
+  as (
     with channel as
 ( 
     select * 
@@ -15,4 +20,6 @@ select
     likes - coalesce(lag(likes, 0) over (order by day), 0) as likes,
     coalesce(estimated_minutes_watched/nullif(views,0), 0) average_view_duration
 from channel
-  ) ;
+order by
+day
+  );

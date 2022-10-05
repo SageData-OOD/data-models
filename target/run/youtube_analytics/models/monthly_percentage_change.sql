@@ -1,6 +1,11 @@
 
 
-  create view "dev"."public"."monthly_percentage_change__dbt_tmp" as (
+  create  table
+    "dev"."public"."monthly_percentage_change__dbt_tmp"
+    
+    
+    
+  as (
     select
 instant_month,
 coalesce(((monthly_views - (lag(monthly_views, 0) over (order by instant_month)))/nullif(lag(monthly_views, 0) 
@@ -33,4 +38,4 @@ instant_month
 order by 1 asc
 )
 order by 1 desc
-  ) ;
+  );

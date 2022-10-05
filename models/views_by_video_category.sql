@@ -5,3 +5,5 @@ from
 {{ref('videos_info')}}
 group by
 category_id
+order by
+total_views desc
