@@ -22320,3 +22320,106 @@ drop view if exists "dev"."public"."channel_info__dbt_backup" cascade
 [0m01:24:52.373965 [info ] [MainThread]: 
 [0m01:24:52.376968 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 [0m01:24:52.384969 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4EF249390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4EF3E4520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4EF47AEC0>]}
+
+
+============================== 2022-10-05 02:15:07.192153 | 9f46a343-c652-43aa-b16a-82094a200cf7 ==============================
+[0m02:15:07.192153 [info ] [MainThread]: Running with dbt=1.2.0
+[0m02:15:07.192153 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'c:\\Users\\Daniel Bammeke\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'resource_types': [], 'output': 'selector', 'indirect_selection': 'eager', 'which': 'list'}
+[0m02:15:07.193153 [debug] [MainThread]: Tracking: tracking
+[0m02:15:07.213154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BEFB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BEE60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BC670>]}
+[0m02:15:07.242153 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m02:15:07.243154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9f46a343-c652-43aa-b16a-82094a200cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BDDB0>]}
+[0m02:15:07.346153 [debug] [MainThread]: Parsing macros\generate_schema_name.sql
+[0m02:15:07.348157 [debug] [MainThread]: Parsing macros\adapters.sql
+[0m02:15:07.389153 [debug] [MainThread]: Parsing macros\catalog.sql
+[0m02:15:07.402154 [debug] [MainThread]: Parsing macros\relations.sql
+[0m02:15:07.403155 [debug] [MainThread]: Parsing macros\adapters\apply_grants.sql
+[0m02:15:07.404153 [debug] [MainThread]: Parsing macros\materializations\snapshot_merge.sql
+[0m02:15:07.406153 [debug] [MainThread]: Parsing macros\utils\cast_bool_to_text.sql
+[0m02:15:07.407154 [debug] [MainThread]: Parsing macros\utils\dateadd.sql
+[0m02:15:07.408153 [debug] [MainThread]: Parsing macros\utils\datediff.sql
+[0m02:15:07.409153 [debug] [MainThread]: Parsing macros\utils\last_day.sql
+[0m02:15:07.410153 [debug] [MainThread]: Parsing macros\utils\length.sql
+[0m02:15:07.410153 [debug] [MainThread]: Parsing macros\utils\listagg.sql
+[0m02:15:07.414152 [debug] [MainThread]: Parsing macros\utils\split_part.sql
+[0m02:15:07.416153 [debug] [MainThread]: Parsing macros\adapters.sql
+[0m02:15:07.446152 [debug] [MainThread]: Parsing macros\catalog.sql
+[0m02:15:07.449153 [debug] [MainThread]: Parsing macros\relations.sql
+[0m02:15:07.451158 [debug] [MainThread]: Parsing macros\materializations\snapshot_merge.sql
+[0m02:15:07.453156 [debug] [MainThread]: Parsing macros\utils\any_value.sql
+[0m02:15:07.454157 [debug] [MainThread]: Parsing macros\utils\dateadd.sql
+[0m02:15:07.455157 [debug] [MainThread]: Parsing macros\utils\datediff.sql
+[0m02:15:07.461156 [debug] [MainThread]: Parsing macros\utils\last_day.sql
+[0m02:15:07.463156 [debug] [MainThread]: Parsing macros\utils\listagg.sql
+[0m02:15:07.465156 [debug] [MainThread]: Parsing macros\utils\split_part.sql
+[0m02:15:07.466154 [debug] [MainThread]: Parsing macros\adapters\apply_grants.sql
+[0m02:15:07.486914 [debug] [MainThread]: Parsing macros\adapters\columns.sql
+[0m02:15:07.496912 [debug] [MainThread]: Parsing macros\adapters\freshness.sql
+[0m02:15:07.500953 [debug] [MainThread]: Parsing macros\adapters\indexes.sql
+[0m02:15:07.504956 [debug] [MainThread]: Parsing macros\adapters\metadata.sql
+[0m02:15:07.512912 [debug] [MainThread]: Parsing macros\adapters\persist_docs.sql
+[0m02:15:07.517955 [debug] [MainThread]: Parsing macros\adapters\relation.sql
+[0m02:15:07.532883 [debug] [MainThread]: Parsing macros\adapters\schema.sql
+[0m02:15:07.532883 [debug] [MainThread]: Parsing macros\etc\datetime.sql
+[0m02:15:07.547891 [debug] [MainThread]: Parsing macros\etc\statement.sql
+[0m02:15:07.552849 [debug] [MainThread]: Parsing macros\generic_test_sql\accepted_values.sql
+[0m02:15:07.554849 [debug] [MainThread]: Parsing macros\generic_test_sql\not_null.sql
+[0m02:15:07.555854 [debug] [MainThread]: Parsing macros\generic_test_sql\relationships.sql
+[0m02:15:07.556849 [debug] [MainThread]: Parsing macros\generic_test_sql\unique.sql
+[0m02:15:07.557849 [debug] [MainThread]: Parsing macros\get_custom_name\get_custom_alias.sql
+[0m02:15:07.559857 [debug] [MainThread]: Parsing macros\get_custom_name\get_custom_database.sql
+[0m02:15:07.561849 [debug] [MainThread]: Parsing macros\get_custom_name\get_custom_schema.sql
+[0m02:15:07.564857 [debug] [MainThread]: Parsing macros\materializations\configs.sql
+[0m02:15:07.567852 [debug] [MainThread]: Parsing macros\materializations\hooks.sql
+[0m02:15:07.572852 [debug] [MainThread]: Parsing macros\materializations\models\incremental\column_helpers.sql
+[0m02:15:07.576853 [debug] [MainThread]: Parsing macros\materializations\models\incremental\incremental.sql
+[0m02:15:07.587848 [debug] [MainThread]: Parsing macros\materializations\models\incremental\is_incremental.sql
+[0m02:15:07.589849 [debug] [MainThread]: Parsing macros\materializations\models\incremental\merge.sql
+[0m02:15:07.605849 [debug] [MainThread]: Parsing macros\materializations\models\incremental\on_schema_change.sql
+[0m02:15:07.624024 [debug] [MainThread]: Parsing macros\materializations\models\table\create_table_as.sql
+[0m02:15:07.630023 [debug] [MainThread]: Parsing macros\materializations\models\table\table.sql
+[0m02:15:07.638024 [debug] [MainThread]: Parsing macros\materializations\models\view\create_or_replace_view.sql
+[0m02:15:07.643024 [debug] [MainThread]: Parsing macros\materializations\models\view\create_view_as.sql
+[0m02:15:07.646023 [debug] [MainThread]: Parsing macros\materializations\models\view\helpers.sql
+[0m02:15:07.649023 [debug] [MainThread]: Parsing macros\materializations\models\view\view.sql
+[0m02:15:07.656026 [debug] [MainThread]: Parsing macros\materializations\seeds\helpers.sql
+[0m02:15:07.685023 [debug] [MainThread]: Parsing macros\materializations\seeds\seed.sql
+[0m02:15:07.694024 [debug] [MainThread]: Parsing macros\materializations\snapshots\helpers.sql
+[0m02:15:07.712024 [debug] [MainThread]: Parsing macros\materializations\snapshots\snapshot.sql
+[0m02:15:07.726023 [debug] [MainThread]: Parsing macros\materializations\snapshots\snapshot_merge.sql
+[0m02:15:07.730022 [debug] [MainThread]: Parsing macros\materializations\snapshots\strategies.sql
+[0m02:15:07.757025 [debug] [MainThread]: Parsing macros\materializations\tests\helpers.sql
+[0m02:15:07.760023 [debug] [MainThread]: Parsing macros\materializations\tests\test.sql
+[0m02:15:07.767025 [debug] [MainThread]: Parsing macros\materializations\tests\where_subquery.sql
+[0m02:15:07.772023 [debug] [MainThread]: Parsing macros\utils\any_value.sql
+[0m02:15:07.775023 [debug] [MainThread]: Parsing macros\utils\bool_or.sql
+[0m02:15:07.777026 [debug] [MainThread]: Parsing macros\utils\cast_bool_to_text.sql
+[0m02:15:07.779024 [debug] [MainThread]: Parsing macros\utils\concat.sql
+[0m02:15:07.781025 [debug] [MainThread]: Parsing macros\utils\data_types.sql
+[0m02:15:07.791024 [debug] [MainThread]: Parsing macros\utils\dateadd.sql
+[0m02:15:07.794024 [debug] [MainThread]: Parsing macros\utils\datediff.sql
+[0m02:15:07.797025 [debug] [MainThread]: Parsing macros\utils\date_trunc.sql
+[0m02:15:07.800024 [debug] [MainThread]: Parsing macros\utils\escape_single_quotes.sql
+[0m02:15:07.802023 [debug] [MainThread]: Parsing macros\utils\except.sql
+[0m02:15:07.805024 [debug] [MainThread]: Parsing macros\utils\hash.sql
+[0m02:15:07.807024 [debug] [MainThread]: Parsing macros\utils\intersect.sql
+[0m02:15:07.810023 [debug] [MainThread]: Parsing macros\utils\last_day.sql
+[0m02:15:07.815023 [debug] [MainThread]: Parsing macros\utils\length.sql
+[0m02:15:07.818024 [debug] [MainThread]: Parsing macros\utils\listagg.sql
+[0m02:15:07.821071 [debug] [MainThread]: Parsing macros\utils\literal.sql
+[0m02:15:07.826791 [debug] [MainThread]: Parsing macros\utils\position.sql
+[0m02:15:07.829788 [debug] [MainThread]: Parsing macros\utils\replace.sql
+[0m02:15:07.831792 [debug] [MainThread]: Parsing macros\utils\right.sql
+[0m02:15:07.833789 [debug] [MainThread]: Parsing macros\utils\safe_cast.sql
+[0m02:15:07.835789 [debug] [MainThread]: Parsing macros\utils\split_part.sql
+[0m02:15:07.838788 [debug] [MainThread]: Parsing tests\generic\builtin.sql
+[0m02:15:08.236035 [debug] [MainThread]: 1699: static parser successfully parsed channel_info.sql
+[0m02:15:08.253037 [debug] [MainThread]: 1699: static parser successfully parsed monthly_percentage_change.sql
+[0m02:15:08.260037 [debug] [MainThread]: 1699: static parser successfully parsed views_by_videos.sql
+[0m02:15:08.267036 [debug] [MainThread]: 1699: static parser successfully parsed views_by_video_category.sql
+[0m02:15:08.273039 [debug] [MainThread]: 1699: static parser successfully parsed staging\videos_info.sql
+[0m02:15:08.634037 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9f46a343-c652-43aa-b16a-82094a200cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA4136200>]}
+[0m02:15:08.664036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9f46a343-c652-43aa-b16a-82094a200cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA41EADD0>]}
+[0m02:15:08.666038 [info ] [MainThread]: Found 5 models, 24 tests, 0 snapshots, 0 analyses, 291 macros, 0 operations, 0 seed files, 2 sources, 0 exposures, 0 metrics
+[0m02:15:08.666038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9f46a343-c652-43aa-b16a-82094a200cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA422E7D0>]}
+[0m02:15:08.669043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA4262B00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BDD20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EFA40BE560>]}
