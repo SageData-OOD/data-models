@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: youtube_raw_data
+    description: 'youtube data'
+    database: dev
+    schema: sd_stage
+    tables:
+      - name: sd__youtube__my_youtube__channel
+        description: 'This table contains general information about youtube channel'
+      - name: sd__youtube__youtube_test__videos
+        description: 'This table gives information about videos within a youtube channel'
+      - name: sd__youtube__youtube_test__channel_basic
+        description: 'This table have day-wise information on videos in a channel'
+        

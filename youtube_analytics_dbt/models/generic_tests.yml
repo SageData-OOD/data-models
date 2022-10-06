@@ -1,0 +1,123 @@
+version: 2
+
+models:
+  - name: channel_info
+    description: This table contains daily information on individual about a channel
+    columns:
+      - name: day
+        description: The days for which information were captured.
+        tests:
+          - unique
+          - not_null
+      - name: views
+        description: The number of views per day.
+        tests:
+          - not_null
+      - name: subscribers_gained
+        description: The new number of suscribers gained daily.
+        tests:
+          - not_null
+      - name: likes
+        description: The number of like attained per day.
+        tests:
+          - not_null
+      - name: average_view_duration
+        description: The average view duration - the total view duration over the number of views.
+        tests:
+          - not_null
+
+  - name: videos_info
+    description: This is a staging table that presnts details about a videos in channel.
+    columns:
+      - name: video_id
+        description: This column contains the id of videos within a channel.
+        tests:
+          - unique
+          - not_null
+      - name: video_title
+        description: This column contains the title of the individual videos.
+        tests:
+          - not_null
+      - name: category_id
+        description: Each video fall under a category, this column contains the category id of the respective videos.
+        tests:
+          - not_null
+      - name: no_of_views
+        description: The column presents the number of views per video.
+        tests:
+          - not_null
+
+  - name: views_by_video_category
+    description: The number of view per video category.
+    columns:
+      - name: category_id
+        description: This column contains the category id of videos.
+        tests:
+        - unique
+        - not_null
+      - name: total_views
+        description: This column contains the total number of view for each category.
+        tests:
+        - not_null
+
+  - name: views_by_videos
+    description: The number of view per video.
+    columns:
+      - name: video_title
+        description: This column contains the titles of videos.
+        tests:
+        - unique
+        - not_null
+      - name: no_of_views
+        description: This column contains the total number of view for each video. 
+        tests:
+          - not_null
+  
+  - name: monthly_percentage_change
+    description: This table contains the percentage in key channel attributes from month to month.
+    columns:
+      - name: instant_month
+        description: The days for which information were captured.
+        tests:
+          - unique
+          - not_null
+      - name: monthly_views
+        description: The percentage change in number of views from the previous month.
+        tests:
+          - not_null
+      - name: monthly_subscribers_gained
+        description: The percentage change in number of new subscribers from the previous month.
+        tests:
+          - not_null
+      - name: monthly_likes
+        description: The percentage change in number of likes from the previous month.
+        tests:
+          - not_null
+      - name: monthly_average_view_duration
+        description: The percentage change in monthly average view duration from the previous month.
+        tests:
+          - not_null
+      - name: monthly_estimated_minutes_watched
+        description: The percentage change in monthly estmated watch time from the previous month.
+        tests:
+          - not_null
+
+  - name: daily_ranking_videos
+    description: This table ranks the videos daily based on the number of views.
+    columns:
+      - name: date
+        description: The date for which date was collected.
+        tests:
+          - not_null
+      - name: video_id
+        description: The ids of videos.
+        tests:
+          - not_null
+      - name: video_title
+        description: Corresponding tites of videos.
+        tests:
+          - not_null 
+      - name: views
+        description: number of view for videos.
+        tests:
+          - not_null  
