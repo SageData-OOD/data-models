@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: facebook_raw_data
+    description: 'facebook data'
+    database: dev
+    schema: sd_stage
+    tables:
+      - name: sd__facebook_ads__dev_daniel__ads_insights
+        description: 'This table contains ads insights for various accounts'
